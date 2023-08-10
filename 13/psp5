@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+bool odd(unsigned char data)
+{
+    if(data & 1)
+        return true;
+    else
+        return even;
+}
+
+int main()
+{
+    cout << odd(a);
+    return 0;
+}

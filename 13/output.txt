@@ -1,0 +1,3 @@
+The sum of the complex numbers is: 0+4i
+The difference of the complex numbers is: -4-10i
+The product of the complex numbers is: 17-20i
