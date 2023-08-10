@@ -1,0 +1,30 @@
+/* CH-230-A
+   a10 p1.c
+   Matheas Roland Borsos
+   m.borsos@jacobs-university.de
+*/
+
+Problem 10.1 Error messages produced by the compiler 
+
+a) Comment out the 'using namespace std;' and then take your time, read and 
+interpret the error messages.
+
+The compiler produces a set of errors due to missing the namespace before
+objects. it outputs that 'string', 'cout' and 'endl' weren't declared in the scope.
+Objects 'string', 'cout' and 'endl' declared inside a namespace block are placed
+in a named scope that prevents them from being mistaken for identically-named 
+symbols in other scopes. Therefore we can only use these objects, that are 
+defined inside of the std namespace.
+We could write them as to each 'std::string', 'std::cout' and 'std::endl' found inside Critter.cpp, as
+an alternative solution.
+
+b) Also remove the Critter:: prefix in one of the methods in Critter.cpp, 
+read and interpret the error message.
+
+When I removed Critter:: before setName method the compiler produces 
+an error saying that 'name' was not defined in the scope.
+'name' is a private data member of the Critter class, defined in Critter.h
+In this case we haven't specified the class our method belongs to,
+therefore we can't access the class' other methods or data members.
+We could write the method definition inside header file or 
+make the data member public, as alternative solutions.
